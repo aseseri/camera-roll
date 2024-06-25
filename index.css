@@ -138,3 +138,32 @@ nav .link:hover{
     font-weight: 400;
     font-style: normal;
 }
+
+/* Mobile Devices */
+@media (max-width: 1000px){
+    :root{
+        --side-margin: 5rem;
+        --image-side: calc((100vw - 2*var(--side-margin) - 2*var(--number-cols)*var(--image-margin))/var(--number-cols));
+    }
+}
+
+@media (max-width:800px){
+    :root{
+        --side-margin: 2rem;
+    }
+}
+
+@media (max-width: 500px){
+    :root{
+        --side-margin: 0.5rem;
+        --navbar-height: 5rem;
+        --number-cols: 2;
+        --image-side: calc((100vw - 2*var(--side-margin) - 2*var(--number-cols)*var(--image-margin))/var(--number-cols));
+    }
+}
+
+@media (max-width: 300px){
+    :root{
+        --number-cols: 1;
+    }
+}

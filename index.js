@@ -28,4 +28,4 @@ function closePopUp(e){
 
 // Clicking on logo
 const logo = document.querySelector("nav .logo");
-logo.addEventListener("click", ()=>{window.location.assign("camera-roll")});
+logo.addEventListener("click", ()=>{window.location.assign("https://aseseri.github.io/camera-roll/")});
