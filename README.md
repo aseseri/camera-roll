@@ -1,2 +1,1 @@
-# expert-guacamole
-Another page for my personal website potentially
+# Images/Pictures from my Camera Roll
