@@ -15,6 +15,9 @@ function clickOnImage(e){
         const clickedImage = e.target.closest(".image").querySelector("img");
         popupImage.setAttribute("src",clickedImage.getAttribute("src"));
         popupHeader.textContent = clickedImage.getAttribute("alt");
+
+        const event = new Event("open-popup");
+        popupImage.dispatchEvent(event);
     }
 }
 

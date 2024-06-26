@@ -1,3 +1,5 @@
+@import "node_modules/ol/ol.css";
+
 :root{
     font-size: 16px;
     /* Inter Font */
@@ -119,13 +121,38 @@ nav .link:hover{
     justify-content: flex-start;
     align-items: flex-start;
     margin-left: 2%;
-    padding: 0 2%;
+    padding: 0 2% 2% 2%;
     width: 100%;
     height: var(--popup-image-height);
     background-color: var(--teal);
     overflow-y: auto;
     overflow-wrap: break-word;
     border-radius: 1rem;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+a.skiplink {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+a.skiplink:focus {
+    clip: auto;
+    height: auto;
+    width: auto;
+    background-color: #fff;
+    padding: 0.3em;
+}
+#map:focus {
+    outline: #4A74A8 solid 0.15em;
 }
 
 .hidden{
