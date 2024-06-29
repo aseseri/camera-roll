@@ -30,15 +30,15 @@ const map = new Map({
   ],
   target: 'map',  // map id of selector
   view: new View({
-    center: fromLonLat(coordinates[popupImageSrc]),
+    center: (typeof fromLonLat(coordinates[popupImageSrc]) === 'undefined')?fromLonLat([-117.744279,33.551659]):fromLonLat(coordinates[popupImageSrc]),
     zoom: 16,
   }),
 });
 
 popupImage.addEventListener("open-popup",()=>{
-  console.log("Entered open-popup event");
   popupImage = document.querySelector(".popup img");
   popupImageSrc = popupImage.getAttribute("src");
-  map.getView().setCenter(fromLonLat(coordinates[popupImageSrc]));
+  let center = fromLonLat(coordinates[popupImageSrc]);
+  map.getView().setCenter((typeof center === 'undefined')?fromLonLat([-117.744279,33.551659]):center);
   map.getView().setZoom(16);
 });
